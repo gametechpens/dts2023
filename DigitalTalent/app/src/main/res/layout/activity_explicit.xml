@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".activity.MainActivity">
+    tools:context=".activity.ExplicitActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
             android:id="@+id/btn_kirim_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="postTanpaData"
+            android:onClick="postData"
             android:text="KIRIM DATA" />
 
     </LinearLayout>
