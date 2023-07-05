@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LatihanStorage</string>
+    <string name="txt_buat_file">Buat File</string>
+    <string name="ubah_file">Ubah File</string>
+    <string name="txt_baca_file">Baca File</string>
+    <string name="txt_hapus_file">Hapus File</string>
+</resources>
