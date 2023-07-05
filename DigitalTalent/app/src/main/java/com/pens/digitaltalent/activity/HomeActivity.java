@@ -14,7 +14,6 @@ public class HomeActivity extends AppCompatActivity {
 
     Button btnCalculator, btnExplicit, btnImplicit, btnSubmit;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,5 +43,10 @@ public class HomeActivity extends AppCompatActivity {
 
     public void clickSubmit(View view) {
         Toast.makeText(this, "Submit", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickListView(View view) {
+        Intent listIntent = new Intent(HomeActivity.this, ListViewActivity.class);
+        startActivity(listIntent);
     }
 }

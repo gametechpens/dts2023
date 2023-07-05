@@ -47,13 +47,13 @@ public class LoginActivity extends AppCompatActivity {
         String password = edPassword.getText().toString().trim();
 
         Log.d("LoginActivity", "Email : " + email + " password : " + password);
-        if (email.equals("dts@dts.com") && password.equalsIgnoreCase("dts123")) {
+//        if (email.equals("dts@dts.com") && password.equalsIgnoreCase("dts123")) {
             Intent newIntent = new Intent(LoginActivity.this, HomeActivity.class);
             startActivity(newIntent);
-            Toast.makeText(this, "Login berhasil!", Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(this, "Email / Password salah!", Toast.LENGTH_LONG).show();
-        }
+//            Toast.makeText(this, "Login berhasil!", Toast.LENGTH_LONG).show();
+//        } else {
+//            Toast.makeText(this, "Email / Password salah!", Toast.LENGTH_LONG).show();
+//        }
     }
 
     public void clickForgotPassword(View view) {
