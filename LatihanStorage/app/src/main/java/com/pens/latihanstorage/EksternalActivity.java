@@ -26,7 +26,7 @@ public class EksternalActivity extends AppCompatActivity implements View.OnClick
 
     public static final String FILENAME = "namafile.txt";
     public static String TAG = "EksternalActivity";
-    public static final int REQUEST_CODE_STORAGE = 100;
+    public static final int REQUEST_CODE_STORAGE = 1;
 
     Button buatFile, ubahFile, bacaFile, deleteFile;
     public int selectEvent = 0;
@@ -69,20 +69,24 @@ public class EksternalActivity extends AppCompatActivity implements View.OnClick
 
 
     public boolean periksaIzinPenyimpanan() {
-        if (Build.VERSION.SDK_INT >= 23) {
-            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                    == PackageManager.PERMISSION_GRANTED) {
-                Log.d("ExternalActivity", "true");
-                return true;
-            } else {
-                Log.d("ExternalActivity", "false");
-
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE_STORAGE);
-                return false;
-            }
-        } else {
+        ActivityCompat.requestPermissions(EksternalActivity.this,
+                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+//
+//        if (Build.VERSION.SDK_INT >= 23) {
+//            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+//                    == PackageManager.PERMISSION_GRANTED) {
+//                Log.d("ExternalActivity", "true");
+//                return true;
+//            } else {
+//                Log.d("ExternalActivity", "false");
+//                ActivityCompat.requestPermissions(EksternalActivity.this,
+//                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+////                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE_STORAGE);
+//                return false;
+//            }
+//        } else {
             return true;
-        }
+//        }
     }
 
 

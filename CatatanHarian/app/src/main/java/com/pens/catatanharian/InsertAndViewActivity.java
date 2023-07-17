@@ -145,9 +145,7 @@ public class InsertAndViewActivity extends AppCompatActivity implements View.OnC
         }
     }
 
-
     void createAndUpdate() {
-
         String path = getFilesDir().toString() + Constants.direktoriFile;
 
         File parent = new File(path);
@@ -169,7 +167,7 @@ public class InsertAndViewActivity extends AppCompatActivity implements View.OnC
                 e.printStackTrace();
             }
         }else{
-            parent.mkdir();
+            parent.mkdir(); //make directory
             File file = new File(path, edtFileName.getText().toString());
             FileOutputStream outputStream = null;
             try {
